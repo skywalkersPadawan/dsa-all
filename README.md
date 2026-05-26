@@ -76,3 +76,56 @@ if __name__ == "__main__":
 ```
 
 ##### 007ListComprehensions.py
+
+- Print all possible coordinates given by (i, j, k) on a 3D grid where the sum of i + j + k is not equal to n.
+- Use list comprehensions instead of multiple loops, as a learning exercise.
+  for the given example of
+  x = 1
+  y = 1
+  z = 2
+  the ranges are:
+  i -> 0, 1 (2 values)
+  j -> 0, 1 (2 values)
+  k -> 0, 1, 2 (3 values)
+  Total combinations:
+  2 x 2 x 3 = 12
+
+  So there are 12 total triplets before filtering.
+
+  [0,0,0]
+  [0,0,1]
+  [0,0,2]
+
+  [0,1,0]
+  [0,1,1]
+  [0,1,2]
+
+  [1,0,0]
+  [1,0,1]
+  [1,0,2]
+
+  [1,1,0]
+  [1,1,1]
+  [1,1,2]
+
+  Then remove the ones where:
+  i + j + k == 3
+  [0,1,2]
+  [1,0,2]
+  [1,1,1]
+
+  So the final list is:
+  [0,0,0]
+  [0,0,1]
+  [0,1,0]
+  [1,0,0]
+  [1,0,1]
+  [1,1,0]
+
+  ```python
+  if __name__ == "__main__":
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    # this will be completed later
+  ```
