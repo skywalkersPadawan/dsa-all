@@ -15,5 +15,4 @@ for n in arr:
     elif n > second and n != first:
         second = n
 print(second)
-
 '''
