@@ -13,4 +13,14 @@ for item_name, net_price in items.items():
     print(item_name, net_price)
 
 
-# all the test cases failed study the lib correctly and then solve the problem
+# all test cases failed study the library correctly and then solve the problem
+# new items will face keyerrors if they are not initialized in the OrderedDict ValueError: too many values to unpack (expected 2)
+
+'''
+a simple explanation of the problem is 
+line = "BANANA FRIES 12"
+line.split()
+will return ['BANANA', 'FRIES', '12']
+
+that is the issue python cannot unpack 3 values into 2 variables New items will raise KeyError because they are not initialized in the OrderedDict. Also, item names may contain spaces, and that is why this will not work
+'''
