@@ -7,6 +7,8 @@ if result is not None:
 
 
 '''
-in this the output will produce None along with the result of the expression, which will fail the test cases
+Without the None check, print(eval(...)) also prints None when the
+expression is a statement (e.g. print(2+3)). HackerRank uses plain
+expressions, but we skip printing when eval returns None.
 
 '''
