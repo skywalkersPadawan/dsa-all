@@ -3,10 +3,28 @@
 T = int(input())
 
 for _ in range(T):
-    # verify if the input is a floating point number from the given rules
+    s = input()
     try:
-        number = float(input())
-        print(True)
+        value = float(s)
+        if s.strip() in ['.', '+.', '-.', '+', '-']:
+            print(False)
+            continue
+        parts = s.split('.')
+        if len(parts) == 2:
+            left, right = parts
+            if (left.strip("+-") == '' and right == ''):
+                print(False)
+                continue
+            if left.strip("+-") == '' and right.isdigit():
+                print(True)
+                continue
+            if left.lstrip("+-").isdigit() and (right == '' or right.isdigit()):
+                print(True)
+                continue
+            print(False)
+        else:
+            # If there's no dot, not a floating point number
+            print(False)
     except ValueError:
         print(False)
 
@@ -16,3 +34,5 @@ for _ in range(T):
 ''' this fails because 0 is an integer but 0.0 is a floating point number  and number = float(input()) will return true for 0 and 0.0 but that will fail the hackerrank test case '''
 
 # this solution is wrong because test cases are not properly understood
+
+# revisit this problem later currently this is solved with help from chatgpt
