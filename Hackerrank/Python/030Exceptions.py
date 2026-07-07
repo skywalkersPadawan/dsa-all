@@ -1,11 +1,13 @@
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 
-for _ in range(int(input())):
+T = int(input())
 
+for _ in range(T):
     try:
-        a, b = list(map(int, input().split()))
+        a, b = map(int, input().split())
         print(a // b)
-    except ZeroDivisionError as e:
+    except Exception as e:
         print("Error Code:", e)
-    except ValueError as e:
-        print("Error Code:", e)
+
+
+# change the language server from python3 to pypy3 and run the code the test cases will pass
