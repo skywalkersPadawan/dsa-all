@@ -1,0 +1,14 @@
+.DS_Store
+.qodo
+
+# ----------------------------
+# Python-specific .gitignore:
+__pycache__/
+.Python
+env/
+venv/
+dist/
+pip-log.txt
+.venv/
+.mypy_cache/
+.pytest_cache/
