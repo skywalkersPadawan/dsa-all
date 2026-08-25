@@ -1,5 +1,7 @@
 # dsa-all
 
+# Python HackerRank challenges completed
+
 Repository for DSA solutions from LeetCode, HackerRank, and HackerEarth. Initial commits include previously solved problems, followed by new solutions and ongoing practice.
 
 ##### 001hello_world.py
