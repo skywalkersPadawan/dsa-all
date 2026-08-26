@@ -9,7 +9,7 @@ class Solution:
         def backtrack(start: int, remaining: int, path: List[int]) -> None:
             if remaining == 0:
                 result.append(path[:])
-                return
+                return None
 
             for i in range(start, len(candidates)):
                 if candidates[i] > remaining:
@@ -20,4 +20,5 @@ class Solution:
                 path.pop()
 
         backtrack(0, target, [])
+
         return result

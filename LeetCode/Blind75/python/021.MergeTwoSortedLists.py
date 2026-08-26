@@ -1,4 +1,3 @@
-from typing import List
 from typing import Optional
 
 
@@ -10,9 +9,7 @@ class ListNode:
 
 class Solution:
     def mergeTwoLists(
-        self,
-        listOne: Optional[ListNode],
-        listTwo: Optional[ListNode]
+        self, listOne: Optional[ListNode], listTwo: Optional[ListNode]
     ) -> Optional[ListNode]:
         mergedHead = ListNode()
         current = mergedHead
