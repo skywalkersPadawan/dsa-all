@@ -60,6 +60,7 @@ def combination_sum(candidates: list[int], target: int) -> list[list[int]]:
             path.pop()  # Undo
 
     backtrack(0, target, [])
+
     return result
 
 
@@ -83,5 +84,4 @@ if __name__ == "__main__":
 
     # Test case 3: impossible target
     assert combination_sum([2], 1) == []
-
     print("All Combination Sum tests passed successfully.")

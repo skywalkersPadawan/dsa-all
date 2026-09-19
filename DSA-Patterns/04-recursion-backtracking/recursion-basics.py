@@ -34,6 +34,7 @@ def factorial(n: int) -> int:
     """Calculates n! recursively."""
     if n <= 1:
         return 1
+
     return n * factorial(n - 1)
 
 
@@ -41,6 +42,7 @@ def power(base: float, exponent: int) -> float:
     """Computes base^exponent in O(log exponent) time using divide-and-conquer recursion."""
     if exponent == 0:
         return 1.0
+
     if exponent < 0:
         return 1.0 / power(base, -exponent)
 
@@ -58,6 +60,7 @@ def is_palindrome_recursive(s: str, left: int = 0, right: int | None = None) -> 
 
     if left >= right:
         return True
+
     if s[left] != s[right]:
         return False
 
@@ -74,5 +77,4 @@ if __name__ == "__main__":
     assert is_palindrome_recursive("racecar") is True
     assert is_palindrome_recursive("hello") is False
     assert is_palindrome_recursive("") is True
-
     print("All Recursion Basics tests passed successfully.")

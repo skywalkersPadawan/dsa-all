@@ -58,6 +58,7 @@ def is_palindrome_linked_list(head: Optional[ListNode]) -> bool:
         if first_pointer.val != second_pointer.val:
             is_palindrome = False
             break
+
         first_pointer = first_pointer.next
         second_pointer = second_pointer.next
 

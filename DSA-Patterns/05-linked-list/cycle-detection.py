@@ -47,7 +47,6 @@ def has_cycle(head: Optional[ListNode]) -> bool:
     """Returns True if the linked list has a cycle, False otherwise."""
     slow = head
     fast = head
-
     while fast and fast.next:
         slow = slow.next
         fast = fast.next.next
@@ -113,5 +112,4 @@ if __name__ == "__main__":
     # 4. Empty list
     assert has_cycle(None) is False
     assert detect_cycle_start(None) is None
-
     print("All Cycle Detection tests passed successfully.")

@@ -37,6 +37,7 @@ def linear_search(nums: list[int], target: int) -> int:
     for index, value in enumerate(nums):
         if value == target:
             return index
+
     return -1
 
 
@@ -53,5 +54,4 @@ if __name__ == "__main__":
 
     # Empty array
     assert linear_search([], 5) == -1
-
     print("All Linear Search tests passed successfully.")

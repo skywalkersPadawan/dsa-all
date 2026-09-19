@@ -47,16 +47,15 @@ def min_eating_speed(piles: list[int], hours: int) -> int:
         for pile in piles:
             # Ceiling division: math.ceil(pile / speed) or (pile + speed - 1) // speed
             total_hours_needed += math.ceil(pile / speed)
+
         return total_hours_needed <= hours
 
     # Search space: speed must be between 1 and max(piles)
     left = 1
     right = max(piles)
     optimal_speed = right
-
     while left <= right:
         mid = left + (right - left) // 2
-
         if can_finish(mid):
             optimal_speed = mid  # mid is valid, try to find a slower speed
             right = mid - 1

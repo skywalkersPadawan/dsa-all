@@ -40,6 +40,7 @@ class MonotonicQueue:
         """Pushes val, removing all smaller elements from the back."""
         while self._deque and self._deque[-1] < val:
             self._deque.pop()
+
         self._deque.append(val)
 
     def pop(self, val: int) -> None:

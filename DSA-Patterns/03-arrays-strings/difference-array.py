@@ -83,5 +83,4 @@ if __name__ == "__main__":
     da2 = DifferenceArray([1, 2, 3, 4, 5])
     da2.update_range(0, 4, 10)  # Add 10 to all
     assert da2.get_result() == [11, 12, 13, 14, 15]
-
     print("All Difference Array tests passed successfully.")

@@ -53,13 +53,12 @@ def permute(nums: list[int]) -> list[list[int]]:
 
             used[i] = True  # Choose
             path.append(nums[i])
-
             backtrack(path)  # Explore
-
             path.pop()  # Undo
             used[i] = False
 
     backtrack([])
+
     return result
 
 
@@ -87,13 +86,12 @@ def permute_unique(nums: list[int]) -> list[list[int]]:
 
             used[i] = True
             path.append(nums[i])
-
             backtrack(path)
-
             path.pop()
             used[i] = False
 
     backtrack([])
+
     return result
 
 
@@ -113,5 +111,4 @@ if __name__ == "__main__":
     assert [1, 1, 2] in dup_res
     assert [1, 2, 1] in dup_res
     assert [2, 1, 1] in dup_res
-
     print("All Permutations tests passed successfully.")

@@ -63,7 +63,9 @@ def largest_rectangle_area(heights: list[int]) -> int:
 
 if __name__ == "__main__":
     # Standard case
-    assert largest_rectangle_area([2, 1, 5, 6, 2, 3]) == 10  # bars 5 and 6: min_height 5, width 2
+    assert (
+        largest_rectangle_area([2, 1, 5, 6, 2, 3]) == 10
+    )  # bars 5 and 6: min_height 5, width 2
     assert largest_rectangle_area([2, 4]) == 4
 
     # Single bar

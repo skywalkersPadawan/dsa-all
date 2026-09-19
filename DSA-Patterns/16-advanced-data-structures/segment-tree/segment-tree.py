@@ -64,9 +64,7 @@ class SegmentTree:
         """Updates nums[index] = val in O(log n)."""
         self._update(1, 0, self.n - 1, index, val)
 
-    def _update(
-        self, node: int, start: int, end: int, index: int, val: int
-    ) -> None:
+    def _update(self, node: int, start: int, end: int, index: int, val: int) -> None:
         if start == end:
             self.nums[index] = val
             self.tree[node] = val
@@ -87,9 +85,7 @@ class SegmentTree:
         """Returns sum of nums[left..right] (inclusive, 0-indexed) in O(log n)."""
         return self._query(1, 0, self.n - 1, left, right)
 
-    def _query(
-        self, node: int, start: int, end: int, left: int, right: int
-    ) -> int:
+    def _query(self, node: int, start: int, end: int, left: int, right: int) -> int:
         # Out of bounds
         if right < start or end < left:
             return 0

@@ -39,7 +39,6 @@ def group_anagrams(strs: list[str]) -> list[list[str]]:
     Time: O(n * k log k) where k is max string length. Space: O(n * k).
     """
     anagram_groups: defaultdict[str, list[str]] = defaultdict(list)
-
     for s in strs:
         # Sorted character tuple serves as the canonical hashable key
         sorted_key = "".join(sorted(s))
@@ -53,7 +52,6 @@ def build_graph_adjacency_list(
 ) -> dict[int, list[int]]:
     """Builds an undirected graph adjacency list using defaultdict(list)."""
     graph: defaultdict[int, list[int]] = defaultdict(list)
-
     for u, v in edges:
         graph[u].append(v)
         graph[v].append(u)

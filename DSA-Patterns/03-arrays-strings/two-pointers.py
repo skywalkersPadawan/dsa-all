@@ -45,10 +45,8 @@ def two_sum_sorted(nums: list[int], target: int) -> list[int]:
     """
     left = 0
     right = len(nums) - 1
-
     while left < right:
         current_sum = nums[left] + nums[right]
-
         if current_sum == target:
             return [left + 1, right + 1]
         elif current_sum < target:
@@ -66,7 +64,6 @@ def reverse_array_in_place(nums: list[int]) -> list[int]:
     """
     left = 0
     right = len(nums) - 1
-
     while left < right:
         nums[left], nums[right] = nums[right], nums[left]
         left += 1
@@ -109,5 +106,4 @@ if __name__ == "__main__":
     new_length = remove_duplicates_sorted(sorted_arr)
     assert new_length == 4
     assert sorted_arr[:new_length] == [1, 2, 3, 4]
-
     print("All Two Pointers tests passed successfully.")

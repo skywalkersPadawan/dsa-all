@@ -59,9 +59,7 @@ class DisjointSetUnion:
         return True
 
 
-def kruskal_mst(
-    num_nodes: int, edges: list[list[int]]
-) -> tuple[int, list[list[int]]]:
+def kruskal_mst(num_nodes: int, edges: list[list[int]]) -> tuple[int, list[list[int]]]:
     """Finds Minimum Spanning Tree using Kruskal's algorithm.
 
     edges format: [u, v, weight]

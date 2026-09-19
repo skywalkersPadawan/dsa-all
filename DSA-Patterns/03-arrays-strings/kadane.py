@@ -41,7 +41,6 @@ def max_subarray_sum(nums: list[int]) -> int:
 
     current_sum = nums[0]
     max_sum = nums[0]
-
     for num in nums[1:]:
         # Decide: extend previous subarray or start new from current element
         current_sum = max(num, current_sum + num)
@@ -60,7 +59,6 @@ def max_subarray_with_indices(nums: list[int]) -> tuple[int, int, int]:
     start = 0
     end = 0
     temp_start = 0
-
     for i in range(1, len(nums)):
         if nums[i] > current_sum + nums[i]:
             current_sum = nums[i]
@@ -93,5 +91,4 @@ if __name__ == "__main__":
     max_val, s, e = max_subarray_with_indices(test_1)
     assert max_val == 6
     assert test_1[s : e + 1] == [4, -1, 2, 1]
-
     print("All Kadane's Algorithm tests passed successfully.")

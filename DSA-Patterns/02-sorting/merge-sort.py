@@ -53,7 +53,6 @@ def merge(left: list[int], right: list[int]) -> list[int]:
     merged = []
     i = 0  # pointer for left
     j = 0  # pointer for right
-
     while i < len(left) and j < len(right):
         # Use <= to maintain stability
         if left[i] <= right[j]:
@@ -84,7 +83,6 @@ if __name__ == "__main__":
         [],
         [-5, -10, 0, 15, 7, 2],
     ]
-
     for nums in test_cases:
         expected = sorted(nums)
         assert merge_sort(nums) == expected

@@ -26,9 +26,7 @@ Space Complexity:
 """
 
 
-def fractional_knapsack(
-    capacity: float, items: list[tuple[float, float]]
-) -> float:
+def fractional_knapsack(capacity: float, items: list[tuple[float, float]]) -> float:
     """Finds maximum value achievable within capacity.
 
     items format: [(weight, value), ...]

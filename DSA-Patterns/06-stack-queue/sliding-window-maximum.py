@@ -39,13 +39,14 @@ def max_sliding_window(nums: list[int], k: int) -> list[int]:
     """Finds maximum value in each sliding window of size k in O(n) time."""
     if not nums or k <= 0:
         return []
+
     if k == 1:
         return nums
 
     result: list[int] = []
+
     # Deque stores indices; values at indices are strictly decreasing
     window_deque: deque[int] = deque()
-
     for i, val in enumerate(nums):
         # 1. Remove indices that are outside the current window
         if window_deque and window_deque[0] <= i - k:

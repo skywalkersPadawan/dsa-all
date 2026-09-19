@@ -62,9 +62,7 @@ def shortest_path_unweighted(
         return 0
 
     visited: set[int] = {start_node}
-    queue: deque[tuple[int, int]] = deque(
-        [(start_node, 0)]
-    )  # (node, current_distance)
+    queue: deque[tuple[int, int]] = deque([(start_node, 0)])  # (node, current_distance)
 
     while queue:
         node, distance = queue.popleft()

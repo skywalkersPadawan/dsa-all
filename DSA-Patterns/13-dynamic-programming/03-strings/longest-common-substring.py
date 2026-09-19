@@ -46,9 +46,7 @@ def longest_common_substring(text1: str, text2: str) -> int:
 
 if __name__ == "__main__":
     assert longest_common_substring("abcde", "abfce") == 2  # "ab"
-    assert (
-        longest_common_substring("GeeksforGeeks", "GeeksQuiz") == 5
-    )  # "Geeks"
+    assert longest_common_substring("GeeksforGeeks", "GeeksQuiz") == 5  # "Geeks"
     assert longest_common_substring("abc", "xyz") == 0
 
     print("All Longest Common Substring tests passed successfully.")

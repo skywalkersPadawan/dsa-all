@@ -39,9 +39,7 @@ from collections import defaultdict
 import heapq
 
 
-def dijkstra(
-    num_nodes: int, edges: list[list[int]], source: int
-) -> dict[int, float]:
+def dijkstra(num_nodes: int, edges: list[list[int]], source: int) -> dict[int, float]:
     """Finds shortest distance from source to all nodes 0..num_nodes-1.
 
     edges format: [u, v, weight] (directed edge).

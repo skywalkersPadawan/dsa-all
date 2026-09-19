@@ -40,7 +40,6 @@ def is_valid_parentheses(s: str) -> bool:
 
     matching_bracket = {")": "(", "}": "{", "]": "["}
     stack: list[str] = []
-
     for char in s:
         if char in matching_bracket:
             # char is a closing bracket

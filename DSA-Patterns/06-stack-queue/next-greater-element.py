@@ -44,7 +44,6 @@ def next_greater_element(nums: list[int]) -> list[int]:
     result = [-1] * n
     # Stack stores indices of elements waiting for their next greater element
     stack: list[int] = []
-
     for i in range(n):
         while stack and nums[i] > nums[stack[-1]]:
             smaller_index = stack.pop()

@@ -77,9 +77,7 @@ def build_huffman_codes(text: str) -> dict[str, str]:
         left = heapq.heappop(min_heap)
         right = heapq.heappop(min_heap)
 
-        parent = HuffmanNode(
-            freq=left.freq + right.freq, left=left, right=right
-        )
+        parent = HuffmanNode(freq=left.freq + right.freq, left=left, right=right)
         heapq.heappush(min_heap, parent)
 
     root = min_heap[0]

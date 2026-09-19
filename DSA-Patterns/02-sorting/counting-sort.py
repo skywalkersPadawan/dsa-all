@@ -46,7 +46,6 @@ def counting_sort(nums: list[int]) -> list[int]:
     min_val = min(nums)
     max_val = max(nums)
     range_span = max_val - min_val + 1
-
     # Count array
     counts = [0] * range_span
     for num in nums:
@@ -72,7 +71,6 @@ if __name__ == "__main__":
         [0],
         [],
     ]
-
     for nums in test_cases:
         expected = sorted(nums)
         assert counting_sort(nums[:]) == expected

@@ -29,9 +29,7 @@ Space Complexity:
 """
 
 
-def unbounded_knapsack(
-    weights: list[int], values: list[int], capacity: int
-) -> int:
+def unbounded_knapsack(weights: list[int], values: list[int], capacity: int) -> int:
     """Finds maximum value when items can be reused an unlimited number of times."""
     dp = [0] * (capacity + 1)
 
@@ -53,6 +51,8 @@ if __name__ == "__main__":
     assert unbounded_knapsack(weights, values, capacity) == 300
 
     # Single item reuse
-    assert unbounded_knapsack([2], [5], 7) == 15  # 3 items of weight 2 = 6, value 3 * 5 = 15
+    assert (
+        unbounded_knapsack([2], [5], 7) == 15
+    )  # 3 items of weight 2 = 6, value 3 * 5 = 15
 
     print("All Unbounded Knapsack tests passed successfully.")

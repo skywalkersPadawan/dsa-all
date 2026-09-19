@@ -47,7 +47,6 @@ def find_middle_node(head: Optional[ListNode]) -> Optional[ListNode]:
     """Returns the second middle node for even-length lists (LeetCode 876)."""
     slow = head
     fast = head
-
     while fast and fast.next:
         slow = slow.next
         fast = fast.next.next
@@ -62,7 +61,6 @@ def find_first_middle_node(head: Optional[ListNode]) -> Optional[ListNode]:
 
     slow = head
     fast = head
-
     while fast.next and fast.next.next:
         slow = slow.next
         fast = fast.next.next
@@ -77,6 +75,7 @@ def from_list(vals: list[int]) -> Optional[ListNode]:
     for v in vals:
         curr.next = ListNode(v)
         curr = curr.next
+
     return dummy.next
 
 

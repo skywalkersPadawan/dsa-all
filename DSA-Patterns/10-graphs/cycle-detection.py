@@ -30,9 +30,7 @@ Space Complexity:
 """
 
 
-def has_cycle_undirected(
-    num_nodes: int, edges: list[list[int]]
-) -> bool:
+def has_cycle_undirected(num_nodes: int, edges: list[list[int]]) -> bool:
     """Detects cycles in an undirected graph using DFS + parent pointer."""
     graph: dict[int, list[int]] = {i: [] for i in range(num_nodes)}
     for u, v in edges:

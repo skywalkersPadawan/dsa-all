@@ -71,6 +71,7 @@ def to_list(head: Optional[ListNode]) -> list[int]:
     while head:
         res.append(head.val)
         head = head.next
+
     return res
 
 
@@ -80,6 +81,7 @@ def from_list(vals: list[int]) -> Optional[ListNode]:
     for v in vals:
         curr.next = ListNode(v)
         curr = curr.next
+
     return dummy.next
 
 

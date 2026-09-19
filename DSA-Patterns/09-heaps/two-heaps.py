@@ -49,11 +49,7 @@ class MedianFinder:
         heapq.heappush(self.max_heap, -num)
 
         # 2. Balance property: max of lower half must be <= min of upper half
-        if (
-            self.max_heap
-            and self.min_heap
-            and (-self.max_heap[0]) > self.min_heap[0]
-        ):
+        if self.max_heap and self.min_heap and (-self.max_heap[0]) > self.min_heap[0]:
             val = -heapq.heappop(self.max_heap)
             heapq.heappush(self.min_heap, val)
 

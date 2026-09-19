@@ -34,7 +34,6 @@ Common Pitfalls / Edge Cases:
 def bubble_sort(nums: list[int]) -> list[int]:
     """Sorts nums in non-decreasing order using in-place bubble sort and returns it."""
     n = len(nums)
-
     for i in range(n):
         swapped = False
         # Last i elements are already in place
@@ -59,7 +58,6 @@ if __name__ == "__main__":
         [3],  # single element
         [],  # empty
     ]
-
     for nums in test_cases:
         expected = sorted(nums)
         assert bubble_sort(nums) == expected

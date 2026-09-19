@@ -44,6 +44,7 @@ def max_subarray_divide_and_conquer(
 
     if left > right:
         return float("-inf")
+
     if left == right:
         return nums[left]
 
@@ -85,5 +86,4 @@ if __name__ == "__main__":
 
     assert max_subarray_divide_and_conquer([1, 2, 3, 4]) == 10
     assert max_subarray_divide_and_conquer([-1, -2, -3]) == -1
-
     print("All Divide and Conquer tests passed successfully.")

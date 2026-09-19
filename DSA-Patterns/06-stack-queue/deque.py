@@ -35,7 +35,6 @@ from collections import deque
 def is_palindrome_deque(s: str) -> bool:
     """Demonstrates deque usage by checking palindrome from both ends."""
     char_deque: deque[str] = deque(s.lower())
-
     while len(char_deque) > 1:
         first = char_deque.popleft()
         last = char_deque.pop()

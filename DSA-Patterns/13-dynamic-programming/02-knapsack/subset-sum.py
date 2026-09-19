@@ -45,9 +45,7 @@ def has_subset_sum(nums: list[int], target_sum: int) -> bool:
 
 if __name__ == "__main__":
     assert has_subset_sum([3, 34, 4, 12, 5, 2], 9) is True  # 4 + 5 = 9
-    assert (
-        has_subset_sum([3, 34, 4, 12, 5, 2], 30) is False
-    )  # no subset sums to 30
+    assert has_subset_sum([3, 34, 4, 12, 5, 2], 30) is False  # no subset sums to 30
     assert has_subset_sum([1, 2, 3, 7], 6) is True  # 1 + 2 + 3 = 6
     assert has_subset_sum([], 0) is True
 

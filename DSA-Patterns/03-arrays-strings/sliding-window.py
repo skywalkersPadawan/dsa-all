@@ -46,7 +46,6 @@ def max_sum_subarray_fixed(nums: list[int], k: int) -> int:
     # Initialize the first window of size k
     window_sum = sum(nums[:k])
     max_sum = window_sum
-
     # Slide window across the rest of the array
     for i in range(k, len(nums)):
         window_sum += nums[i] - nums[i - k]
@@ -64,7 +63,6 @@ def length_of_longest_substring_without_repeating(s: str) -> int:
     char_index_map: dict[str, int] = {}
     max_length = 0
     left = 0
-
     for right, char in enumerate(s):
         # If char was seen within the current window, move left past its previous index
         if char in char_index_map and char_index_map[char] >= left:
@@ -87,5 +85,4 @@ if __name__ == "__main__":
     assert length_of_longest_substring_without_repeating("bbbbb") == 1  # "b"
     assert length_of_longest_substring_without_repeating("pwwkew") == 3  # "wke"
     assert length_of_longest_substring_without_repeating("") == 0
-
     print("All Sliding Window tests passed successfully.")

@@ -6,7 +6,6 @@ class Solution:
         count = {0: 1}
         prefix = 0
         ans = 0
-
         for num in nums:
             prefix += num
             ans += count.get(prefix - k, 0)

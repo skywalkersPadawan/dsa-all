@@ -50,7 +50,6 @@ def reverse_list(head: Optional[ListNode]) -> Optional[ListNode]:
     """Reverses a singly linked list iteratively in O(n) time and O(1) space."""
     previous = None
     current = head
-
     while current:
         next_node = current.next
         current.next = previous
@@ -81,6 +80,7 @@ def to_list(head: Optional[ListNode]) -> list[int]:
     while head:
         res.append(head.val)
         head = head.next
+
     return res
 
 
@@ -90,6 +90,7 @@ def from_list(vals: list[int]) -> Optional[ListNode]:
     for v in vals:
         curr.next = ListNode(v)
         curr = curr.next
+
     return dummy.next
 
 

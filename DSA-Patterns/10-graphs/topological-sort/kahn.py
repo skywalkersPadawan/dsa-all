@@ -34,9 +34,7 @@ Space Complexity:
 from collections import deque
 
 
-def topological_sort_kahn(
-    num_nodes: int, edges: list[list[int]]
-) -> list[int]:
+def topological_sort_kahn(num_nodes: int, edges: list[list[int]]) -> list[int]:
     """Computes topological order of DAG nodes 0..num_nodes-1 using Kahn's algorithm."""
     graph: dict[int, list[int]] = {i: [] for i in range(num_nodes)}
     in_degree = [0] * num_nodes

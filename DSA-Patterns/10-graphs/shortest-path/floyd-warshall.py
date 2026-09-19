@@ -29,9 +29,7 @@ Space Complexity:
 """
 
 
-def floyd_warshall(
-    num_nodes: int, edges: list[list[int]]
-) -> list[list[float]]:
+def floyd_warshall(num_nodes: int, edges: list[list[int]]) -> list[list[float]]:
     """Computes all-pairs shortest paths matrix in O(V^3) time.
 
     edges format: [u, v, weight] (directed).

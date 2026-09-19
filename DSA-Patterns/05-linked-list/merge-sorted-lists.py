@@ -45,7 +45,6 @@ def merge_two_lists(
     """Merges two sorted linked lists in O(n + m) time and O(1) space."""
     dummy = ListNode(0)
     tail = dummy
-
     while list1 and list2:
         if list1.val <= list2.val:
             tail.next = list1
@@ -53,6 +52,7 @@ def merge_two_lists(
         else:
             tail.next = list2
             list2 = list2.next
+
         tail = tail.next
 
     # Attach whichever list still has nodes remaining
@@ -67,6 +67,7 @@ def to_list(head: Optional[ListNode]) -> list[int]:
     while head:
         res.append(head.val)
         head = head.next
+
     return res
 
 
@@ -76,6 +77,7 @@ def from_list(vals: list[int]) -> Optional[ListNode]:
     for v in vals:
         curr.next = ListNode(v)
         curr = curr.next
+
     return dummy.next
 
 
@@ -90,5 +92,4 @@ if __name__ == "__main__":
 
     # Both empty lists
     assert merge_two_lists(None, None) is None
-
     print("All Merge Sorted Lists tests passed successfully.")

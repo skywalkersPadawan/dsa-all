@@ -39,10 +39,8 @@ def binary_search(nums: list[int], target: int) -> int:
     """Returns the index of target in sorted nums, or -1 if not found."""
     left = 0
     right = len(nums) - 1
-
     while left <= right:
         mid = left + (right - left) // 2
-
         if nums[mid] == target:
             return mid
         elif nums[mid] < target:
@@ -64,7 +62,6 @@ def binary_search_recursive(
         return -1
 
     mid = left + (right - left) // 2
-
     if nums[mid] == target:
         return mid
     elif nums[mid] < target:

@@ -71,7 +71,9 @@ def first_unique_char(s: str) -> int:
 
 
 if __name__ == "__main__":
-    freq = build_frequency_map(["apple", "banana", "apple", "orange", "banana", "apple"])
+    freq = build_frequency_map(
+        ["apple", "banana", "apple", "orange", "banana", "apple"]
+    )
     assert freq["apple"] == 3
     assert freq["banana"] == 2
     assert freq["orange"] == 1

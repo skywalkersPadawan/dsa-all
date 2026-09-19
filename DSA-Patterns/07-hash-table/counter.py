@@ -38,6 +38,7 @@ def top_k_frequent(nums: list[int], k: int) -> list[int]:
     Time: O(n log k), Space: O(n).
     """
     counts = Counter(nums)
+
     # most_common(k) returns [(elem, count), ...]
     return [element for element, _ in counts.most_common(k)]
 

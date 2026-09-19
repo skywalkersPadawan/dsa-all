@@ -63,9 +63,7 @@ def insert_at_head(head: Optional[ListNode], val: int) -> ListNode:
     return ListNode(val, head)
 
 
-def delete_node_by_value(
-    head: Optional[ListNode], target: int
-) -> Optional[ListNode]:
+def delete_node_by_value(head: Optional[ListNode], target: int) -> Optional[ListNode]:
     """Deletes the first node with value == target using a dummy node."""
     dummy = ListNode(0, head)
     current = dummy

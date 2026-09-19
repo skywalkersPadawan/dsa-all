@@ -49,6 +49,7 @@ def subsets(nums: list[int]) -> list[list[int]]:
             path.pop()  # Undo
 
     backtrack(0, [])
+
     return result
 
 
@@ -73,6 +74,7 @@ def subsets_with_dup(nums: list[int]) -> list[list[int]]:
             path.pop()
 
     backtrack(0, [])
+
     return result
 
 
@@ -91,5 +93,4 @@ if __name__ == "__main__":
     # [1, 2] appears once, [2, 2] appears once, etc.
     assert unique_subsets.count([2]) == 1
     assert unique_subsets.count([1, 2]) == 1
-
     print("All Subsets tests passed successfully.")

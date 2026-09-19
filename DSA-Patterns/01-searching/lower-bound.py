@@ -37,10 +37,8 @@ def lower_bound(nums: list[int], target: int) -> int:
     """
     left = 0
     right = len(nums)
-
     while left < right:
         mid = left + (right - left) // 2
-
         if nums[mid] >= target:
             right = mid
         else:
@@ -67,5 +65,4 @@ if __name__ == "__main__":
 
     # Empty array
     assert lower_bound([], 5) == 0
-
     print("All Lower Bound tests passed successfully.")

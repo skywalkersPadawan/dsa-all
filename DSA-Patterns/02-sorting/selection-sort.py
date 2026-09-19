@@ -35,7 +35,6 @@ Common Pitfalls / Edge Cases:
 def selection_sort(nums: list[int]) -> list[int]:
     """Sorts nums in non-decreasing order using in-place selection sort and returns it."""
     n = len(nums)
-
     for i in range(n):
         min_index = i
         for j in range(i + 1, n):
@@ -58,7 +57,6 @@ if __name__ == "__main__":
         [7],
         [],
     ]
-
     for nums in test_cases:
         expected = sorted(nums)
         assert selection_sort(nums) == expected

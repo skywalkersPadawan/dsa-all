@@ -29,9 +29,7 @@ Space Complexity:
 """
 
 
-def topological_sort_dfs(
-    num_nodes: int, edges: list[list[int]]
-) -> list[int]:
+def topological_sort_dfs(num_nodes: int, edges: list[list[int]]) -> list[int]:
     """Computes topological sort using 3-color DFS."""
     graph: dict[int, list[int]] = {i: [] for i in range(num_nodes)}
     for u, v in edges:

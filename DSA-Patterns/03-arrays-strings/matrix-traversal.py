@@ -51,28 +51,29 @@ def spiral_order(matrix: list[list[int]]) -> list[int]:
     bottom = len(matrix) - 1
     left = 0
     right = len(matrix[0]) - 1
-
     while top <= bottom and left <= right:
         # 1. Traverse Right along current top row
         for col in range(left, right + 1):
             result.append(matrix[top][col])
-        top += 1
 
+        top += 1
         # 2. Traverse Down along current right column
         for row in range(top, bottom + 1):
             result.append(matrix[row][right])
-        right -= 1
 
+        right -= 1
         # 3. Traverse Left along current bottom row (if row still remains)
         if top <= bottom:
             for col in range(right, left - 1, -1):
                 result.append(matrix[bottom][col])
+
             bottom -= 1
 
         # 4. Traverse Up along current left column (if column still remains)
         if left <= right:
             for row in range(bottom, top - 1, -1):
                 result.append(matrix[row][left])
+
             left += 1
 
     return result
@@ -84,7 +85,6 @@ def get_neighbors_4_dir(
     """Generates valid 4-directional orthogonal neighbors for a given grid cell."""
     directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]  # Right, Down, Left, Up
     neighbors = []
-
     for dr, dc in directions:
         new_row = row + dr
         new_col = col + dc
@@ -125,5 +125,4 @@ if __name__ == "__main__":
     # Test neighbors helper
     neighbors = get_neighbors_4_dir(0, 0, 3, 3)
     assert neighbors == [(0, 1), (1, 0)]  # only Right and Down valid at (0, 0)
-
     print("All Matrix Traversal tests passed successfully.")

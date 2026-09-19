@@ -58,9 +58,7 @@ def count_connected_components(
 if __name__ == "__main__":
     # 5 nodes with edges [[0, 1], [1, 2], [3, 4]]
     # Component 1: {0, 1, 2}, Component 2: {3, 4} -> Total 2
-    count, comp_list = count_connected_components(
-        5, [[0, 1], [1, 2], [3, 4]]
-    )
+    count, comp_list = count_connected_components(5, [[0, 1], [1, 2], [3, 4]])
     assert count == 2
     assert len(comp_list) == 2
 

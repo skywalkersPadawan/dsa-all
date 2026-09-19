@@ -51,12 +51,14 @@ class Queue:
         """Removes and returns the front item. Raises IndexError if empty. O(1)."""
         if self.is_empty():
             raise IndexError("dequeue from empty queue")
+
         return self._items.popleft()
 
     def peek(self) -> Any:
         """Returns the front item without removing it. Raises IndexError if empty. O(1)."""
         if self.is_empty():
             raise IndexError("peek from empty queue")
+
         return self._items[0]
 
     def is_empty(self) -> bool:

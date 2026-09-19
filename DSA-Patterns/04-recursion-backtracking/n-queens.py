@@ -42,7 +42,6 @@ def solve_n_queens(n: int) -> list[list[str]]:
     result: list[list[str]] = []
     # columns[r] = c means a queen is placed at board[r][c]
     queens_in_col = [-1] * n
-
     cols_used: set[int] = set()
     pos_diag_used: set[int] = set()  # row + col
     neg_diag_used: set[int] = set()  # row - col
@@ -53,6 +52,7 @@ def solve_n_queens(n: int) -> list[list[str]]:
             row_chars = ["."] * n
             row_chars[queens_in_col[r]] = "Q"
             board.append("".join(row_chars))
+
         return board
 
     def backtrack(row: int) -> None:
@@ -73,7 +73,6 @@ def solve_n_queens(n: int) -> list[list[str]]:
             cols_used.add(col)
             pos_diag_used.add(row + col)
             neg_diag_used.add(row - col)
-
             backtrack(row + 1)
 
             # Undo placement
@@ -83,6 +82,7 @@ def solve_n_queens(n: int) -> list[list[str]]:
             queens_in_col[row] = -1
 
     backtrack(0)
+
     return result
 
 
@@ -102,5 +102,4 @@ if __name__ == "__main__":
     # N = 8 has 92 solutions (standard chess board)
     solutions_8 = solve_n_queens(8)
     assert len(solutions_8) == 92
-
     print("All N-Queens tests passed successfully.")

@@ -50,12 +50,14 @@ class Stack:
         """Removes and returns the top item. Raises IndexError if empty. O(1)."""
         if self.is_empty():
             raise IndexError("pop from empty stack")
+
         return self._items.pop()
 
     def peek(self) -> Any:
         """Returns the top item without removing it. Raises IndexError if empty. O(1)."""
         if self.is_empty():
             raise IndexError("peek from empty stack")
+
         return self._items[-1]
 
     def is_empty(self) -> bool:

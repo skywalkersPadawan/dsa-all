@@ -43,7 +43,6 @@ def daily_temperatures(temperatures: list[int]) -> list[int]:
     answer = [0] * n
     # Stack stores indices of temperatures in decreasing order
     stack: list[int] = []
-
     for current_index, current_temp in enumerate(temperatures):
         # While current day is warmer than the day at the top of stack
         while stack and current_temp > temperatures[stack[-1]]:

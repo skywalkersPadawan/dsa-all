@@ -38,7 +38,6 @@ def insertion_sort(nums: list[int]) -> list[int]:
     for i in range(1, len(nums)):
         current_value = nums[i]
         j = i - 1
-
         # Shift elements of nums[0..i-1] that are greater than current_value to one position ahead
         while j >= 0 and nums[j] > current_value:
             nums[j + 1] = nums[j]
@@ -58,7 +57,6 @@ if __name__ == "__main__":
         [42],
         [],
     ]
-
     for nums in test_cases:
         expected = sorted(nums)
         assert insertion_sort(nums) == expected

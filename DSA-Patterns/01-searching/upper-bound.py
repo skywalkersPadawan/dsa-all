@@ -38,10 +38,8 @@ def upper_bound(nums: list[int], target: int) -> int:
     """
     left = 0
     right = len(nums)
-
     while left < right:
         mid = left + (right - left) // 2
-
         if nums[mid] > target:
             right = mid
         else:
@@ -63,9 +61,10 @@ def count_occurrences(nums: list[int], target: int) -> int:
             r = m
         else:
             l = m + 1
-    first_index = l
 
+    first_index = l
     last_index = upper_bound(nums, target)
+
     return last_index - first_index
 
 
@@ -90,5 +89,4 @@ if __name__ == "__main__":
     assert count_occurrences(nums, 4) == 3
     assert count_occurrences(nums, 2) == 1
     assert count_occurrences(nums, 9) == 0
-
     print("All Upper Bound tests passed successfully.")

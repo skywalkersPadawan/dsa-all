@@ -36,9 +36,7 @@ Common Pitfalls / Edge Cases:
 """
 
 
-def quick_sort(
-    nums: list[int], low: int = 0, high: int | None = None
-) -> list[int]:
+def quick_sort(nums: list[int], low: int = 0, high: int | None = None) -> list[int]:
     """In-place Quick Sort on nums[low..high]. Returns nums."""
     if high is None:
         high = len(nums) - 1
@@ -55,7 +53,6 @@ def partition(nums: list[int], low: int, high: int) -> int:
     """Lomuto partition scheme: places nums[high] at its correct sorted position."""
     pivot = nums[high]
     i = low - 1  # index of smaller element
-
     for j in range(low, high):
         if nums[j] <= pivot:
             i += 1
@@ -76,7 +73,6 @@ if __name__ == "__main__":
         [42],
         [],
     ]
-
     for nums in test_cases:
         expected = sorted(nums)
         assert quick_sort(nums[:]) == expected

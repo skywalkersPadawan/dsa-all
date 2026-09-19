@@ -54,6 +54,7 @@ def combine(n: int, k: int) -> list[list[int]]:
             path.pop()  # Undo
 
     backtrack(1, [])
+
     return result
 
 
@@ -69,5 +70,4 @@ if __name__ == "__main__":
 
     # k == n
     assert combine(3, 3) == [[1, 2, 3]]
-
     print("All Combinations tests passed successfully.")

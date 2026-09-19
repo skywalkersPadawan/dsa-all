@@ -27,9 +27,7 @@ Space Complexity:
 """
 
 
-def knapsack_01(
-    weights: list[int], values: list[int], capacity: int
-) -> int:
+def knapsack_01(weights: list[int], values: list[int], capacity: int) -> int:
     """Finds maximum value for 0/1 Knapsack with given capacity."""
     # dp[w] = max value with capacity w
     dp = [0] * (capacity + 1)

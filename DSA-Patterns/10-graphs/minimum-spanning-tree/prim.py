@@ -30,9 +30,7 @@ from collections import defaultdict
 import heapq
 
 
-def prim_mst(
-    num_nodes: int, edges: list[list[int]]
-) -> tuple[int, list[list[int]]]:
+def prim_mst(num_nodes: int, edges: list[list[int]]) -> tuple[int, list[list[int]]]:
     """Finds Minimum Spanning Tree using Prim's algorithm.
 
     edges format: [u, v, weight] (undirected).

@@ -56,19 +56,15 @@ def subarray_sum_equals_k(nums: list[int], k: int) -> int:
     current_prefix_sum = 0
     # Map from prefix_sum -> number of times it has occurred
     prefix_counts: dict[int, int] = {0: 1}
-
     for num in nums:
         current_prefix_sum += num
-
         # If (current_prefix_sum - k) was seen before, those earlier points
         # mark the start of valid subarrays ending at the current position.
         target_prefix = current_prefix_sum - k
         if target_prefix in prefix_counts:
             count += prefix_counts[target_prefix]
 
-        prefix_counts[current_prefix_sum] = (
-            prefix_counts.get(current_prefix_sum, 0) + 1
-        )
+        prefix_counts[current_prefix_sum] = prefix_counts.get(current_prefix_sum, 0) + 1
 
     return count
 
@@ -88,9 +84,6 @@ if __name__ == "__main__":
 
     # Subarray sum equals k tests
     assert subarray_sum_equals_k([1, 1, 1], 2) == 2  # [1, 1] at (0,1) and (1,2)
-    assert (
-        subarray_sum_equals_k([1, 2, 3], 3) == 2
-    )  # [1, 2] at (0,1) and [3] at (2,2)
+    assert subarray_sum_equals_k([1, 2, 3], 3) == 2  # [1, 2] at (0,1) and [3] at (2,2)
     assert subarray_sum_equals_k([1, -1, 0], 0) == 3
-
     print("All Prefix Sum tests passed successfully.")

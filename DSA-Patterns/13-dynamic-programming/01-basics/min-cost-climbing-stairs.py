@@ -45,8 +45,6 @@ def min_cost_climbing_stairs(cost: list[int]) -> int:
 
 if __name__ == "__main__":
     assert min_cost_climbing_stairs([10, 15, 20]) == 15
-    assert (
-        min_cost_climbing_stairs([1, 100, 1, 1, 1, 100, 1, 1, 100, 1]) == 6
-    )
+    assert min_cost_climbing_stairs([1, 100, 1, 1, 1, 100, 1, 1, 100, 1]) == 6
 
     print("All Min Cost Climbing Stairs tests passed successfully.")

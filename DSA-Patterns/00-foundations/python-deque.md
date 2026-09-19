@@ -1,20 +1,21 @@
 # Python `collections.deque` (Double-Ended Queue)
 
 ## Overview
+
 A `collections.deque` (pronounced "deck") is implemented internally as a doubly linked list of fixed-size memory blocks. It provides `O(1)` appends and pops from **both ends**.
 
 ---
 
 ## Complexity Comparison: `list` vs `deque`
 
-| Operation | `list` | `collections.deque` |
-| :--- | :--- | :--- |
-| Append to right (`append`) | `O(1)` amortized | `O(1)` |
-| Pop from right (`pop`) | `O(1)` | `O(1)` |
-| Append to left (`appendleft`) | `O(n)` (slow!) | `O(1)` (fast!) |
-| Pop from left (`popleft`) | `O(n)` (slow!) | `O(1)` (fast!) |
-| Access by index (`d[i]`) | `O(1)` | `O(n)` (must walk blocks) |
-| Search by value (`x in d`) | `O(n)` | `O(n)` |
+| Operation                     | `list`           | `collections.deque`       |
+| :---------------------------- | :--------------- | :------------------------ |
+| Append to right (`append`)    | `O(1)` amortized | `O(1)`                    |
+| Pop from right (`pop`)        | `O(1)`           | `O(1)`                    |
+| Append to left (`appendleft`) | `O(n)` (slow!)   | `O(1)` (fast!)            |
+| Pop from left (`popleft`)     | `O(n)` (slow!)   | `O(1)` (fast!)            |
+| Access by index (`d[i]`)      | `O(1)`           | `O(n)` (must walk blocks) |
+| Search by value (`x in d`)    | `O(n)`           | `O(n)`                    |
 
 ---
 
@@ -22,6 +23,7 @@ A `collections.deque` (pronounced "deck") is implemented internally as a doubly 
 
 1. **Breadth-First Search (BFS):**
    Queues require FIFO (First-In, First-Out). Always use `deque` for BFS queues.
+
    ```python
    from collections import deque
 

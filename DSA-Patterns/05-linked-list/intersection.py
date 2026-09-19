@@ -81,5 +81,4 @@ if __name__ == "__main__":
 
     # One list empty
     assert get_intersection_node(None, headA) is None
-
     print("All Intersection of Two Linked Lists tests passed successfully.")

@@ -40,7 +40,6 @@ Common Pitfalls / Edge Cases:
 def heap_sort(nums: list[int]) -> list[int]:
     """Sorts nums in non-decreasing order using in-place Heap Sort and returns it."""
     n = len(nums)
-
     # Step 1: Build max heap (rearrange array)
     for i in range(n // 2 - 1, -1, -1):
         heapify(nums, n, i)
@@ -49,7 +48,6 @@ def heap_sort(nums: list[int]) -> list[int]:
     for i in range(n - 1, 0, -1):
         # Move current root (maximum) to the end
         nums[0], nums[i] = nums[i], nums[0]
-
         # Call max heapify on the reduced heap
         heapify(nums, i, 0)
 
@@ -61,7 +59,6 @@ def heapify(nums: list[int], heap_size: int, root_index: int) -> None:
     largest = root_index
     left_child = 2 * root_index + 1
     right_child = 2 * root_index + 2
-
     # If left child exists and is greater than root
     if left_child < heap_size and nums[left_child] > nums[largest]:
         largest = left_child
@@ -86,7 +83,6 @@ if __name__ == "__main__":
         [9],
         [],
     ]
-
     for nums in test_cases:
         expected = sorted(nums)
         assert heap_sort(nums) == expected
