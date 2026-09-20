@@ -2,6 +2,14 @@
 
 # Python HackerRank challenges completed
 
+# LeetCode Blind-75 completed
+
+# currently solving similar problems list from blind-75
+
+but blind-75 premium problems around 6 of them still need to be solved
+make changes to this readme to read and include alternative solutions
+
+
 Repository for DSA solutions from LeetCode, HackerRank, and HackerEarth. Initial commits include previously solved problems, followed by new solutions and ongoing practice.
 
 ##### 001hello_world.py
