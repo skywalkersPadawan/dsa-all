@@ -2,7 +2,8 @@
 
 ## What is Big-O?
 
-Big-O notation describes the upper bound (worst-case scenario) of an algorithm's growth rate in terms of time or space as the input size n increases towards infinity.
+Big-O notation describes the upper bound (worst-case scenario) of an algorithm's growth rate in terms of time or space as the input size n increases towards infinity. In simple terms, it tells you how the runtime or memory usage of an algorithm scales when the input size grows. It doesn't tell you the exact time in seconds or the exact memory in bytes, but rather how the performance changes relative to the input size. 
+
 
 ---
 
